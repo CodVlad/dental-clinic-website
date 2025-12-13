@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f8fafc;
   --foreground: #171717;
 }
 
@@ -12,15 +12,24 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Force light theme across the app */
+
+html, body, #__next {
+  min-height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Font Awesome tooth icon styling */
+.fa-tooth {
+  font-size: 1.25rem; /* text-xl equivalent */
+  color: #3b82f6; /* blue-500 */
+}
+
+.fa-tooth:hover {
+  color: #1d4ed8; /* blue-700 for hover effect */
 }

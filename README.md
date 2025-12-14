@@ -1,157 +1,36 @@
-# ApexCare - Site de Rezervări Dentare
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Site web modern pentru clinică stomatologică, construit cu Next.js, React, TypeScript și TailwindCSS.
+## Getting Started
 
-## 🚀 Caracteristici
+First, run the development server:
 
-- Design responsive și modern
-- Sistem de rezervări online
-- Integrare cu Supabase pentru gestionarea datelor
-- Secțiune de administrare
-- Optimizat pentru toate dispozitivele (mobile, tablet, desktop)
-
-## 📋 Cerințe
-
-- Node.js 18+ 
-- npm sau yarn
-- Cont Supabase (pentru baza de date)
-
-## 🛠️ Instalare
-
-1. Clonează repository-ul:
-```bash
-git clone <repository-url>
-cd rezervari-site
-```
-
-2. Instalează dependențele:
-```bash
-npm install
-# sau
-yarn install
-```
-
-3. Creează fișierul `.env.local` în root-ul proiectului:
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-4. Rulează serverul de dezvoltare:
 ```bash
 npm run dev
-# sau
+# or
 yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Deschide [http://localhost:3000](http://localhost:3000) în browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🏗️ Build pentru Production
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-1. Construiește aplicația:
-```bash
-npm run build
-# sau
-yarn build
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-2. Rulează versiunea de production:
-```bash
-npm start
-# sau
-yarn start
-```
+## Learn More
 
-## 📦 Deployment
+To learn more about Next.js, take a look at the following resources:
 
-### Vercel (Recomandat)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. Conectează repository-ul la Vercel
-2. Adaugă variabilele de mediu în setările proiectului:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-3. Deploy automat la fiecare push
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### Alte platforme
+## Deploy on Vercel
 
-Aplicația poate fi deployată pe orice platformă care suportă Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
-- etc.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🔧 Configurare Supabase
-
-1. Creează un proiect nou pe [Supabase](https://supabase.com)
-2. Obține URL-ul și cheia anonimă din setările proiectului
-3. Creează următoarele tabele în Supabase:
-
-```sql
--- Tabel pentru rezervări
-CREATE TABLE reservations (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  nume TEXT NOT NULL,
-  telefon TEXT NOT NULL,
-  email TEXT,
-  medic TEXT NOT NULL,
-  data DATE NOT NULL,
-  ora TIME NOT NULL,
-  serviciu TEXT NOT NULL,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-
--- Tabel pentru utilizatori admin
-CREATE TABLE admin_users (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  email TEXT UNIQUE NOT NULL,
-  password_hash TEXT NOT NULL,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-```
-
-## 📁 Structura Proiectului
-
-```
-rezervari-site/
-├── pages/
-│   ├── index.tsx          # Pagina principală
-│   ├── _app.tsx           # Configurare globală
-│   └── admin/             # Secțiunea de administrare
-├── public/                 # Fișiere statice (imagini, logo)
-├── utils/                  # Utilitare (Supabase client, auth)
-├── next.config.mjs         # Configurare Next.js
-├── package.json            # Dependențe
-└── tsconfig.json          # Configurare TypeScript
-```
-
-## 🎨 Tehnologii Utilizate
-
-- **Next.js 15** - Framework React
-- **React 19** - Biblioteca UI
-- **TypeScript** - Tipare statice
-- **TailwindCSS 4** - Stilizare
-- **Supabase** - Backend și baza de date
-- **Font Awesome** - Icoane
-- **Animate.css** - Animații
-
-## 📝 Scripturi Disponibile
-
-- `npm run dev` - Rulează serverul de dezvoltare
-- `npm run build` - Construiește aplicația pentru production
-- `npm start` - Rulează versiunea de production
-- `npm run lint` - Verifică codul pentru erori
-
-## 🔒 Securitate
-
-- Variabilele de mediu nu trebuie să fie commitate în git
-- Folosește `.env.local` pentru variabile locale
-- Configurarea Supabase trebuie să fie securizată
-
-## 📞 Support
-
-Pentru întrebări sau probleme, contactează echipa de dezvoltare.
-
-## 📄 Licență
-
-Acest proiect este proprietate privată.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

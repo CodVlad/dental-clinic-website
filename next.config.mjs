@@ -38,14 +38,17 @@ const nextConfig = {
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
+    unoptimized: true, // Previne problemele de optimizare pe unele platforme
   },
   
   // Configurare pentru production
   reactStrictMode: true,
   
-  // Turbopack config (doar pentru development)
-  turbopack: {
-    root: new URL('.', import.meta.url).pathname,
+  // Previne erorile legate de redirect-status-code.js
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
   },
 };
 

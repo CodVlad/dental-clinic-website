@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Optimizare pentru production
+  output: 'standalone',
+  poweredByHeader: false,
+  compress: true,
+  
   images: {
     remotePatterns: [
       {
@@ -14,10 +19,32 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'via.placeholder.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.trustfamilydental.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.vecteezy.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'w7.pngwing.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'e7.pngegg.com',
+      },
     ],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
   },
+  
+  // Configurare pentru production
+  reactStrictMode: true,
+  
+  // Turbopack config (doar pentru development)
   turbopack: {
-    // Explicitly set project root to avoid multi-lockfile root inference warnings
     root: new URL('.', import.meta.url).pathname,
   },
 };

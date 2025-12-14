@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Middleware simplificat pentru a preveni erorile legate de redirect-status-code.js
+// Simplified middleware to prevent errors related to redirect-status-code.js
 export function middleware(request: NextRequest) {
-  // Returnează răspunsul fără modificări pentru a evita erorile interne Next.js
+  // Returns response without modifications to avoid internal Next.js errors
   return NextResponse.next();
 }
 
 export const config = {
-  // Matcher gol pentru a dezactiva middleware-ul efectiv, dar a preveni erorile
+  // Empty matcher to effectively disable middleware, but prevent errors
   matcher: [],
 };
 

@@ -43,7 +43,7 @@ export default function AdminPage() {
     }
   }, [initialized, user, router, checked]);
 
-  // Fetch rezervări
+  // Fetch reservations
   const fetchRezervari = async () => {
     const supabase = getSupabase();
     if (!supabase) return;
@@ -176,7 +176,7 @@ export default function AdminPage() {
     if (user) fetchForFilter(selectedDate, showFuture);
   }, [user, selectedDate, showFuture]);
 
-  // Adaugă rezervare
+  // Add reservation
   const handleAddRezervare = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.nume || !form.telefon || !form.medic || !form.serviciu || !form.ora) {
@@ -227,7 +227,7 @@ export default function AdminPage() {
     }
   };
 
-  // Ștergere rezervare
+  // Delete reservation
   const deleteRezervare = async (id: number) => {
     if (!confirm("Sigur doriți să ștergeți această rezervare?")) return;
     const supabase = getSupabase();
@@ -487,7 +487,7 @@ export default function AdminPage() {
   );
 }
 
-// --- Helper sort ---
+// --- Helper sort function ---
 function sortReservations(data: Rezervare[]): Rezervare[] {
   return data.sort((a, b) => {
     if (a.data === b.data) return a.ora.localeCompare(b.ora);

@@ -600,9 +600,9 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Secțiunea Principală */}
+      {/* Main Section */}
       <section id="home" className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 pt-16 pb-32 lg:pt-20 lg:pb-40 relative overflow-hidden mx-[15px] rounded-b-3xl">
-        {/* Umbră de culoarea butonului pe jumătate din partea de jos */}
+        {/* Button color shadow on bottom half */}
         <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-600/40 via-blue-600/25 to-transparent"></div>
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -611,7 +611,7 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Partea stângă - Conținut text */}
+            {/* Left side - Text content */}
             <div>
               <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 px-5 py-2 rounded-full text-xs font-semibold mb-8 shadow-sm border border-blue-200">
                 #1 Centru Stomatologic Premium
@@ -642,7 +642,7 @@ export default function Home() {
               </div>
             </div>
 
-        {/* Imagine poziționată în partea dreaptă jos - Ascunsă pe mobil */}
+        {/* Image positioned at bottom right - Hidden on mobile */}
         <div className="hidden lg:flex absolute bottom-0 right-0 w-full lg:w-1/2 items-end justify-end overflow-visible z-[0]">
               <img 
             src="/dental2-removebg-preview.png" 
@@ -653,14 +653,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Secțiunea cu Trei Carduri - Poziționată între Secțiunea Principală și Despre */}
+      {/* Three Cards Section - Positioned between Main Section and About */}
       <div className="relative -mt-25  z-[1] flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-3 gap-4">
-            {/* Cardul 1 - Medici Îngrijitori cu 2 carduri mici în interior */}
+            {/* Card 1 - Caring Dentists with 2 small cards inside */}
             <div className="lg:col-span-2 bg-gradient-to-br from-blue-50 to-white rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300">
               <div className="flex flex-row lg:grid lg:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 items-start">
-                {/* Partea stângă - Conținut text */}
+                {/* Left side - Text content */}
                 <div className="flex-1 min-w-0">
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">Medici Îngrijitori</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
@@ -674,9 +674,9 @@ export default function Home() {
               </a>
             </div>
                 
-                {/* Partea dreaptă - Două carduri mici */}
+                {/* Right side - Two small cards */}
                 <div className="flex-shrink-0 grid grid-cols-2 gap-2 sm:gap-3 w-40 sm:w-60 md:w-75 lg:w-auto">
-                  {/* Cardul mic 1 - Zâmbete Transformate */}
+                  {/* Small card 1 - Transformed Smiles */}
                   <div className="bg-white rounded-lg sm:rounded-xl p-2.5 sm:p-3 lg:p-4 border border-gray-100 shadow-sm min-w-0">
                     <div className="mb-1.5 sm:mb-2">
                       <span className="text-[10px] sm:text-xs font-medium text-gray-500 uppercase tracking-wider sm:tracking-widest leading-tight break-words">Zâmbete Transformate</span>
@@ -702,7 +702,7 @@ export default function Home() {
               
             {/* Cardul 3 - Testimonial */}
             <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 h-full relative">
-              {/* Iconiță coroană în stânga sus */}
+              {/* Crown icon at top left */}
               <div className="absolute top-4 left-4">
                 <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -720,7 +720,7 @@ export default function Home() {
                 </div>
                 </div>
 
-      {/* Secțiunea Despre */}
+      {/* About Section */}
       <section id="despre" className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-white to-blue-50/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-center">
@@ -1003,7 +1003,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Zona de Sus: Titlu + Descriere + Buton */}
           <div className="grid lg:grid-cols-2 gap-8 items-start mb-16">
-            {/* Partea stângă - Conținut text */}
+            {/* Left side - Text content */}
             <div>
               <p className="text-sm font-semibold text-blue-600 mb-4 uppercase tracking-wider"># Echipa Noastră</p>
               {/* Titlu - Bold, potrivit stilului site-ului */}

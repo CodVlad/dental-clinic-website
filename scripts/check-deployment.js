@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * Script de verificare pre-deployment
- * Rulează: node scripts/check-deployment.js
+ * Pre-deployment check script
+ * Run: node scripts/check-deployment.js
  */
 
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Verificare Pre-Deployment...\n');
+console.log('🔍 Pre-Deployment Check...\n');
 
 let errors = [];
 let warnings = [];

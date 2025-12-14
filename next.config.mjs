@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimizare pentru production
-  output: 'standalone',
+  // Configuration for Netlify - using static export since we don't have SSR/API routes
+  // @netlify/plugin-nextjs will automatically handle middleware if needed
+  output: 'export',
+  
   poweredByHeader: false,
   compress: true,
   
@@ -38,13 +40,13 @@ const nextConfig = {
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
-    unoptimized: true, // Previne problemele de optimizare pe unele platforme
+    unoptimized: true, // Required for static export
   },
   
-  // Configurare pentru production
+  // Production configuration
   reactStrictMode: true,
   
-  // Previne erorile legate de redirect-status-code.js
+  // Prevents errors related to redirect-status-code.js
   experimental: {
     serverActions: {
       bodySizeLimit: '2mb',
